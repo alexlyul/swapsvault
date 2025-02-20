@@ -26,10 +26,7 @@
  * ```
  */
 
-import './index.css';
-import { createApp } from 'vue';
-import App from './App.vue';
-
-createApp(App).mount('#app');
+// Vue application import
+import './app/app';
 
 console.log('👋 This message is being logged by "renderer.ts", included via Vite');
