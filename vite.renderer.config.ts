@@ -20,7 +20,8 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url)),
+            // eslint-disable-next-line @typescript-eslint/naming-convention
+            '@': fileURLToPath(new URL('./src/app', import.meta.url)),
         },
     },
     css: {

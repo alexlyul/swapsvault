@@ -7,9 +7,18 @@
     "baseUrl": ".",
     "types": ["element-plus/global"],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./src/app/*"]
+    },
+    "strictNullChecks": true,
   },
-  "include": ["env.d.ts", "src/**/*", "src/*", "src/**/*.vue", "vite.renderer.config.ts", "forge.env.d.ts"],
-  "exclude": ["src/**/__tests__/*"]
+  "include": [
+    "env.d.ts",
+    "components.d.ts",
+    "auto-imports.d.ts,",
+    "src/app/**/*",
+    "src/app/*",
+    "src/app/**/*.vue",
+    "vite.renderer.config.ts",
+  ],
+  "exclude": []
 }

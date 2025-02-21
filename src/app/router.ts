@@ -1,7 +1,6 @@
 import {createMemoryHistory, createRouter,} from 'vue-router';
 import type {RouteRecordRaw} from 'vue-router';
-// const ThePasswordView = () => import('@/app/modules/passwords').then(module => module.ThePasswordView);
-import ThePasswordView from "@/app/modules/passwords/ThePasswordsView.vue";
+import ThePasswordView from "@/modules/passwords/ThePasswordsView.vue";
 
 const routes = {
     home: {path: '/', redirect: '/passwords-list'},

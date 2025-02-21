@@ -1,15 +1,16 @@
 import type {IPasswordFull} from "../types/IPassword";
 
-export function savePassword(password: IPasswordFull): Promise<void> {
-    return new Promise((resolve, reject) => {
+export async function savePassword(password: IPasswordFull): Promise<void> {
+    return new Promise((resolve) => {
         setTimeout(() => {
+            console.log('Password saved', password);
             resolve();
         }, 1000);
     });
 }
 
-export function getPasswords(): Promise<IPasswordFull[]> {
-    return new Promise((resolve, reject) => {
+export async function getPasswords(): Promise<IPasswordFull[]> {
+    return new Promise((resolve) => {
         setTimeout(() => {
             resolve([
                 {

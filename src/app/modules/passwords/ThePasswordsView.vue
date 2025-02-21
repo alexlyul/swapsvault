@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import LayoutDefaultPage from "@/app/layouts/LayoutDefaultPage.vue";
+import LayoutDefaultPage from "@/layouts/LayoutDefaultPage.vue";
 import ListFilter from "./components/ListFilter.vue";
 import List from "./components/List.vue";
 import {onMounted, ref} from "vue";
 import type {IPasswordPublic} from "./types/IPassword.ts";
-import {getPasswords} from "@/app/modules/passwords/services/PasswordsService.ts";
+import {getPasswords} from "@/modules/passwords/services/PasswordsService.ts";
 import {DocumentAdd, Download, More} from "@element-plus/icons-vue";
 
 const passwords = ref<IPasswordPublic[]>([]);
-
-function onFiltersChange(filters: unknown) {
+ 
+function onFiltersChange(filters: unknown): void {
   console.log(filters)
 }
 
-onMounted(() => {
-  getPasswords()
+onMounted(async () => {
+  return getPasswords()
       .then((data) => {
         passwords.value = data;
       });

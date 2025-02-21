@@ -10,12 +10,22 @@
     "baseUrl": ".",
     "outDir": "dist",
     "moduleResolution": "node",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "strictNullChecks": true,
   },
   "include": [
     "./*.ts",
     "./*.js",
-    "env.d.ts"
+    "env.d.ts",
+    "forge.env.d.ts",
+    "src/main.ts",
   ],
-  "exclude": ["vite.renderer.config.ts"]
+  "exclude": [
+    "vite.renderer.config.ts",
+    "src/app/**/*.ts",
+    "src/app/**/*.js",
+    "components.d.ts",
+    "auto-imports.d.ts",
+    "eslint.config.ts",
+  ]
 }

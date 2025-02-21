@@ -14,7 +14,7 @@ const props = defineProps<{
         <template #default="scope">
           <div class="flex size-6 flex-none items-center justify-center rounded-lg">
             <div class="size-4 text-gray-600">
-              <img v-if="scope.row.url" :src="scope.row.url ? scope.row.url + '/favicon.ico': null" >
+              <img v-if="scope.row.url" :src="scope.row.url + '/favicon.ico'" >
             </div>
           </div>
         </template>
