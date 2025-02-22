@@ -14,11 +14,12 @@
   "include": [
     "env.d.ts",
     "components.d.ts",
-    "auto-imports.d.ts,",
+    "auto-imports.d.ts",
     "src/app/**/*",
     "src/app/*",
     "src/app/**/*.vue",
     "vite.renderer.config.ts",
+    "eslint.config.ts",
   ],
   "exclude": []
 }
