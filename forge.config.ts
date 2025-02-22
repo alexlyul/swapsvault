@@ -28,13 +28,13 @@ const config: ForgeConfig = {
           entry: 'src/preload.ts',
           config: 'vite.preload.config.ts',
           target: 'preload',
-        },
+        }
       ],
       renderer: [
         {
           name: 'main_window',
           config: 'vite.renderer.config.ts',
-        },
+        }
       ],
     }),
     // Fuses are used to enable/disable various Electron functionality
@@ -47,7 +47,7 @@ const config: ForgeConfig = {
       [FuseV1Options.EnableNodeCliInspectArguments]: false,
       [FuseV1Options.EnableEmbeddedAsarIntegrityValidation]: true,
       [FuseV1Options.OnlyLoadAppFromAsar]: true,
-    }),
+    })
   ],
 };
 

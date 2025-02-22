@@ -18,22 +18,22 @@ export async function getPasswords(): Promise<IPasswordFull[]> {
                     username: 'john.doe',
                     password: '123456',
                     url: 'https://facebook.com',
-                    tags: ['social']
+                    tags: ['social'],
                 },
                 {
                     name: 'Google',
                     username: 'john.doe',
                     password: '123456',
                     url: 'https://google.com',
-                    tags: ['search']
+                    tags: ['search'],
                 },
                 {
                     name: 'Twitter',
                     username: 'john.doe',
                     password: '123456',
                     url: 'https://twitter.com',
-                    tags: ['social']
-                },
+                    tags: ['social'],
+                }
             ]);
         }, 1000);
     });

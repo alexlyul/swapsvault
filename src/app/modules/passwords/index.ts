@@ -4,7 +4,7 @@ import type { IPasswordFull, IPasswordPublic } from './types/IPassword.ts';
 export type {
     IPasswordFull,
     IPasswordPublic,
-}
+};
 export {
-    ThePasswordView
-}
+    ThePasswordView,
+};

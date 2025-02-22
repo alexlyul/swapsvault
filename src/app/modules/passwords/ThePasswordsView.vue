@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import LayoutDefaultPage from "@/layouts/LayoutDefaultPage.vue";
 import ListFilter from "./components/ListFilter.vue";
-import List from "./components/List.vue";
+import ListTable from "./components/ListTable.vue";
 import {onMounted, ref} from "vue";
 import type {IPasswordPublic} from "./types/IPassword.ts";
 import {getPasswords} from "@/modules/passwords/services/PasswordsService.ts";
@@ -10,7 +10,7 @@ import {DocumentAdd, Download, More} from "@element-plus/icons-vue";
 const passwords = ref<IPasswordPublic[]>([]);
  
 function onFiltersChange(filters: unknown): void {
-  console.log(filters)
+  console.log(filters);
 }
 
 onMounted(async () => {
@@ -18,45 +18,61 @@ onMounted(async () => {
       .then((data) => {
         passwords.value = data;
       });
-})
+}); 
 </script>
 
 <template>
-  <LayoutDefaultPage>
+  <layout-default-page>
     <template #header>
       <h1 class="text-2xl text-slate-800 flex items-center justify-between">
         <span>Passwords</span>
         <span class="inline-flex">
-          <ElButton :icon="DocumentAdd" type="primary" size="small">Add new entry</ElButton>
+          <el-button
+            :icon="DocumentAdd"
+            type="primary"
+            size="small"
+          >Add new entry</el-button>
 
-          <el-popover trigger="click" placement="bottom" width="180">
+          <el-popover
+            trigger="click"
+            placement="bottom"
+            width="180"
+          >
             <template #reference>
-              <ElButton :icon="More" type="default" size="small"/>
+              <el-button
+                :icon="More"
+                type="default"
+                size="small"
+              /> 
             </template>
-            <div>
+            <div> 
               <el-button-group size="small">
-                <ElButton :icon="Download" size="small">Export</ElButton>
-                <ElButton :icon="Download" size="small">Import</ElButton>
+                <el-button
+                  :icon="Download"
+                  size="small"
+                >Export</el-button>
+                <el-button
+                  :icon="Download"
+                  size="small"
+                >Import</el-button>
               </el-button-group>
             </div>
           </el-popover>
         </span>
-
       </h1>
       <h2 class="text-sm text-slate-800">
         Create, save, and manage your passwords so you can easily sign in to sites and
-        apps.</h2>
-      <ListFilter
-          @change="onFiltersChange"
+        apps.
+      </h2>
+      <list-filter 
+        @change="onFiltersChange"
       />
     </template>
     <template #default>
-      <List :items="passwords"/>
+      <list-table :items="passwords" />
     </template>
-    <template #footer>
-    </template>
-  </LayoutDefaultPage>
-
+    <template #footer />
+  </layout-default-page>
 </template>
 
 <style scoped lang="scss">

@@ -6,7 +6,7 @@ const date = new Date().getFullYear();
   <div class="layout--default overflow-auto">
     <div class="layout--default__header px-20 py-4 bg-gray-100">
       <div class="layout-row">
-        <slot name="header"/>
+        <slot name="header" />
       </div>
     </div>
     <div class="layout--default__content overflow-auto flex-1 px-20 py-10">
@@ -16,8 +16,10 @@ const date = new Date().getFullYear();
     </div>
     <div class="layout--default__footer px-20 bg-gray-100 py-4">
       <div class="layout-row">
-        <slot name="footer"/>
-        <p class="text-xs text-slate-600 text-center">Copyright © {{ date }} Password Manager </p>
+        <slot name="footer" />
+        <p class="text-xs text-slate-600 text-center">
+          Copyright © {{ date }} Password Manager
+        </p>
       </div>
     </div>
   </div>
